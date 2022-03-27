@@ -1,13 +1,12 @@
 import 'dart:async';
+import 'dart:io';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:login_page/screens/Action.dart';
-import 'package:login_page/screens/Notification.dart';
-import 'package:login_page/screens/Settings.dart';
 import 'package:flutter/material.dart';
 import 'package:login_page/utils/color_utils.dart';
-import 'package:video_player/video_player.dart';
-import 'Activity.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+import '../reusable_widgets/data.dart';
 String displayText1 = 'Please wait for a while';
 String displayText2 = 'Please wait for a while';
 class HomeScreen extends StatefulWidget {
@@ -17,11 +16,21 @@ class HomeScreen extends StatefulWidget {
 }
 class _HomeScreenState extends State<HomeScreen> {
   static var data ;
+  void loadCounter() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      count = (prefs.getInt('counter') ?? 0);
+    });
+    print("loded count");
+    print(count);
+  }
   final DatabaseReference _dbref = FirebaseDatabase.instance.reference();
   //late StreamSubscription _update;
   @override
   void initState() {
     super.initState();
+   loadCounter();
+    sleep(const Duration(seconds: 1));
     _activateListeners();
   }
   void _activateListeners() {

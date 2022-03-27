@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'package:login_page/reusable_widgets/data.dart';
 import 'package:login_page/screens/Action.dart';
 import 'package:login_page/screens/Notification.dart';
 import 'package:login_page/screens/Settings.dart';
@@ -8,6 +9,7 @@ import 'package:login_page/screens/signin_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:login_page/utils/color_utils.dart';
 import 'Activity.dart';
+import 'package:login_page/reusable_widgets/data.dart';
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
 
@@ -18,6 +20,7 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
 
   var _selectedIndex=0;
+
 
   final screens = [
     HomeScreen(),
@@ -58,27 +61,32 @@ class _MainScreenState extends State<MainScreen> {
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
                 icon: Icon(Icons.home),
-                title: Text('Home'),
+                label: "Home",
+                // title: Text('Home'),
                 backgroundColor: const Color(0xFF333462)
             ),
             BottomNavigationBarItem(
                 icon: Icon(Icons.call_to_action),
-                title: Text('Action'),
+                label: "Action",
+                 // : Text('Action'),
                 backgroundColor: const Color(0xFF333462)
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.local_activity),
-              title: Text('Activity'),
+                label: "Activity",
+              //title: Text('Activity'),
               backgroundColor: const Color(0xFF333462),
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.notification_important),
-              title: Text('Notification'),
+                label: "Notification",
+             // title: Text('Notification'),
               backgroundColor: const Color(0xFF333462),
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.settings),
-              title: Text('Settings'),
+                label: "Settings",
+              //title: Text('Settings'),
               backgroundColor: const Color(0xFF333462),
             ),
           ],
