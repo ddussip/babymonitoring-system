@@ -1,12 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:login_page/reusable_widgets/reusable_widget.dart';
 import 'package:login_page/screens/MainScreen.dart';
-import 'package:login_page/screens/home_screen.dart';
 import 'package:login_page/screens/reset_password.dart';
 import 'package:login_page/screens/signup_screen.dart';
 import 'package:login_page/utils/color_utils.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
 
