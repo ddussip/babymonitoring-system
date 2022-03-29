@@ -1,15 +1,10 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
-import 'package:login_page/reusable_widgets/data.dart';
 import 'package:login_page/screens/Action.dart';
 import 'package:login_page/screens/Notification.dart';
 import 'package:login_page/screens/Settings.dart';
 import 'package:login_page/screens/home_screen.dart';
-import 'package:login_page/screens/signin_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:login_page/utils/color_utils.dart';
 import 'Activity.dart';
-import 'package:login_page/reusable_widgets/data.dart';
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
 

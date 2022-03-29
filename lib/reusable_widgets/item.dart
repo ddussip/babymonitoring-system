@@ -11,26 +11,11 @@ class Item extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
-          title:Text("hello"),
+          title:Text(data.temp.toString()),
         subtitle: Text(data.Date.toString()),
       ),
     );
   }
 }
-// class Item extends StatefulWidget {
-//   const Item({Key? key}) : super(key: key);
-//
-//   @override
-//   _ItemState createState() => _ItemState();
-// }
-//
-// class _ItemState extends State<Item> {
-//   late final Data data;
-//   @override
-//   Widget build(BuildContext context) {
-//     return ListTile(
-//       leading: Text(data.temp),
-//     );;
-//   }
-// }
+
 

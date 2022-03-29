@@ -25,7 +25,6 @@ class _HomeScreenState extends State<HomeScreen> {
     print(count);
   }
   final DatabaseReference _dbref = FirebaseDatabase.instance.reference();
-  //late StreamSubscription _update;
   @override
   void initState() {
     super.initState();
